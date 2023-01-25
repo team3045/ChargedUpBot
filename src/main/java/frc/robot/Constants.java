@@ -11,6 +11,12 @@
 
 package frc.robot;
 
+import com.fasterxml.jackson.databind.ser.std.StaticListSerializerBase;
+
+import edu.wpi.first.math.Vector;
+import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.math.Vector2;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants.  This class should not be used for any other purpose.  All constants should be
@@ -20,13 +26,24 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
-   /**
-    * public static final class DriveConstants {
-    *   public static final int kLeftMotor1Port = 0;
-    *   public static final int kLeftMotor2Port = 1;
-    *   public static final int kRightMotor1Port = 2;
-    *   public static final int kRightMotor2Port = 3; 
-    * }
-    */ 
+   //Fourbar target position
+   public static double highPos=0;
+   public static double midPos=0;
+   public static double lowPos=0;
+
+   //IDs for buttons
+   public static int highPosButtonID=XboxController.Button.kY.value;
+   public static int midPosButtonID=XboxController.Button.kB.value;
+   public static int lowPosButtonID=XboxController.Button.kA.value;
+
+   //Telescoping arm target positions
+   public static Vector2 lowPosTArm = new Vector2(0, 0);
+   public static Vector2 midPosTArm = new Vector2(0, 0);
+   public static Vector2 highPosTArm = new Vector2(0, 0);
+   public static double armLenghtToUnits=0;
+   public static double armLengthZero = 0;
+
+   //Zero position to calibrate position of both fourbar or telescoping arm
+   public static double armZero=0;
 }
 
