@@ -26,6 +26,9 @@ import frc.robot.math.Vector2;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
+   //Claw Constants
+   public static double clawSPeed
+
    //Fourbar target position
    public static double highPos=0;
    public static double midPos=0;
