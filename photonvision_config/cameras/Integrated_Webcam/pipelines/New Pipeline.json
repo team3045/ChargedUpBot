@@ -1,18 +1,18 @@
-[ "ReflectivePipelineSettings", {
+[ "AprilTagPipelineSettings", {
   "pipelineIndex" : 0,
-  "pipelineType" : "Reflective",
+  "pipelineType" : "AprilTag",
   "inputImageRotationMode" : "DEG_0",
   "pipelineNickname" : "New Pipeline",
   "cameraAutoExposure" : false,
-  "cameraExposure" : 6.0,
+  "cameraExposure" : 49.8,
   "cameraBrightness" : 50,
   "cameraGain" : -1,
   "cameraRedGain" : -1,
   "cameraBlueGain" : -1,
   "cameraVideoModeIndex" : 0,
   "streamingFrameDivisor" : "NONE",
-  "ledMode" : true,
-  "inputShouldShow" : false,
+  "ledMode" : false,
+  "inputShouldShow" : true,
   "outputShouldShow" : true,
   "hsvHue" : {
     "first" : 50,
@@ -28,7 +28,7 @@
   },
   "hueInverted" : false,
   "outputShouldDraw" : true,
-  "outputShowMultipleTargets" : false,
+  "outputShowMultipleTargets" : true,
   "contourArea" : {
     "first" : 0.0,
     "second" : 100.0
@@ -63,12 +63,19 @@
   "contourGroupingMode" : "Single",
   "contourIntersection" : "Up",
   "solvePNPEnabled" : false,
-  "targetModel" : "k2020HighGoalOuter",
+  "targetModel" : "k6in_16h5",
   "cornerDetectionStrategy" : "APPROX_POLY_DP_AND_EXTREME_CORNERS",
   "cornerDetectionUseConvexHulls" : true,
   "cornerDetectionExactSideCount" : false,
   "cornerDetectionSideCount" : 4,
   "cornerDetectionAccuracyPercentage" : 10.0,
-  "contourFilterRangeX" : 2.0,
-  "contourFilterRangeY" : 2.0
+  "tagFamily" : "kTag16h5",
+  "decimate" : 1,
+  "blur" : 0.0,
+  "threads" : 4,
+  "debug" : false,
+  "refineEdges" : true,
+  "numIterations" : 40,
+  "hammingDist" : 0,
+  "decisionMargin" : 35
 } ]
