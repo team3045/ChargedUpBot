@@ -9,6 +9,7 @@
 // it from being updated in the future.
 
 // ROBOTBUILDER TYPE: Command.
+//Imports 
 
 package frc.robot.commands;
 
@@ -50,11 +51,12 @@ public class ConeCubeSwap extends CommandBase {
     }
 
     // Called when the command is initially scheduled.
-    @Override
+
+    @Override //change color of CANdle if cube/cone
     public void initialize() {
-        if (isCube) { // if it is a cube
+        if (isCube) { // if it is a cube (not cone)
             candle.setLEDs(255, 0, 255);// purple
-        } else { // if it is not a cube
+        } else { // if it is not a cube (cone)
             candle.setLEDs(255, 255, 0);// yellow
         }
 
