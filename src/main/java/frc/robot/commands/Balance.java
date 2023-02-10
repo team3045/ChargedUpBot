@@ -67,4 +67,3 @@ public class Balance extends CommandBase {
      * Create Constant in Constants.java called speed per degree
      * Set the motors to the hyperbolic tangent of the angle times the constant using the Motor.Set() method
      */
-}
