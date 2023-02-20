@@ -63,8 +63,8 @@ public class ToggleGrab extends CommandBase {
     @Override
     public void execute() {
 
-        m_claw.leftClawMotor.set(ControlMode.PercentOutput, Constants.clawSpeed);
-        m_claw.rightClawMotor.set(ControlMode.PercentOutput, Constants.clawSpeed);
+        m_claw.leftClawMotor.set(Constants.clawSpeed);
+        m_claw.rightClawMotor.set(Constants.clawSpeed);
         m_claw.solenoid.set(!ConeCubeSwap.isCube);
         
 
@@ -74,7 +74,8 @@ public class ToggleGrab extends CommandBase {
     @Override
     public void end(boolean interrupted) 
     {
-        m_claw.clawMotor.set(ControlMode.PercentOutput, 0);
+        m_claw.leftClawMotor.set(0);
+        m_claw.rightClawMotor.set(0);
         m_claw.solenoid.set(false);
     }
 
