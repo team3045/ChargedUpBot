@@ -37,7 +37,17 @@ public class Constants {
    //IDs for buttons
    public static int highPosButtonID=XboxController.Button.kY.value;
    public static int midPosButtonID=XboxController.Button.kB.value;
-   public static int lowPosButtonID=XboxController.Button.kA.value;
+   public static int lowPosButtonID = XboxController.Button.kA.value;
+   
+   //Falcons
+   public static int lMotor1 = 3;
+   public static int lMotor2 = 3;
+   public static int lMotor3 = 3;
+   public static int RMotor1 = 3;
+   public static int RMotor2 = 3;
+   public static int RMotor3 = 3;
+
+
 
    //Telescoping arm target positions
    public static Vector2 lowPosTArm = new Vector2(0, 0);
