@@ -60,7 +60,7 @@ public class Outtake extends CommandBase {
     @Override
     public void execute() {
         
-        m_claw.clawMotor.set(ControlMode.PercentOutput, -Constants.clawSpeed);
+        //m_claw.clawMotor.set(ControlMode.PercentOutput, -Constants.clawSpeed);
         
     }
 
@@ -68,7 +68,7 @@ public class Outtake extends CommandBase {
     @Override
     public void end(boolean interrupted) {
 
-        m_claw.clawMotor.set(ControlMode.PercentOutput, Constants.clawSpeed = 0);
+        //m_claw.clawMotor.set(ControlMode.PercentOutput, Constants.clawSpeed = 0);
 
     }
 
