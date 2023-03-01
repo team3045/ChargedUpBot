@@ -83,7 +83,7 @@ public class RobotContainer {
 
     switch (m_driveTrain.getDriveMode()) {
       case TANK:
-        m_driveTrain.setDefaultCommand(new RunCommand(() -> m_driveTrain.tankDrive(-LJoystick.getRawAxis(1), -RJoystick.getRawAxis(1)), m_driveTrain));
+        m_driveTrain.setDefaultCommand(new RunCommand(() -> m_driveTrain.tankDrive(-LJoystick.getRawAxis(1), RJoystick.getRawAxis(1)), m_driveTrain));
         break;
       //case CHEEZY:
         //m_driveTrain.setDefaultCommand(new RunCommand(() -> m_driveTrain.cheezyDrive(getLeftY(), getRightX()), m_driveTrain));
