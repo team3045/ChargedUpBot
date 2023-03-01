@@ -71,8 +71,8 @@ private DifferentialDrive differentialDrive;
         rightMotor3.follow(rightMotor1);
         rightMotor3.setInverted(false);
         
-        DifferentialDrive m_driveTrain = new DifferentialDrive(leftMotor1, rightMotor2);
-        m_driveTrain.setDeadband(0.05);
+        DifferentialDrive m_drive = new DifferentialDrive(leftMotor1, rightMotor2);
+        m_drive.setDeadband(0.05);
 
         leftMotor1.configSelectedFeedbackSensor(FeedbackDevice.IntegratedSensor, 0, 0);
         rightMotor1.configSelectedFeedbackSensor(FeedbackDevice.IntegratedSensor, 0, 0);
