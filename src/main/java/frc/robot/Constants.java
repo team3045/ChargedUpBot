@@ -11,6 +11,8 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 //import com.fasterxml.jackson.databind.ser.std.StaticListSerializerBase;
 
 //import edu.wpi.first.math.Vector;
@@ -26,7 +28,11 @@ import frc.robot.math.Vector2;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
-   //Claw Constants
+ //Balance  
+   public static final double kPitchDeadspot = 2;
+   public static final double kSpeedMult = 2;
+
+//Claw Constants
    public static double clawSpeed = 0;
 
    //Fourbar target position
@@ -58,5 +64,6 @@ public class Constants {
 
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
+   public static int pigeonCanId = 0;
 }
 
