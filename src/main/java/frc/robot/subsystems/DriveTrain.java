@@ -80,7 +80,7 @@ public final DifferentialDrive m_drive;
         rightMotor3.setInverted(InvertType.FollowMaster);
         
         m_drive = new DifferentialDrive(leftMotor1, rightMotor2);
-        m_drive.setDeadband(0.05);
+        //m_drive.setDeadband(0.05);
 
         leftMotor1.configSelectedFeedbackSensor(FeedbackDevice.IntegratedSensor, 0, 0);
         rightMotor1.configSelectedFeedbackSensor(FeedbackDevice.IntegratedSensor, 0, 0);
@@ -106,6 +106,7 @@ public final DifferentialDrive m_drive;
 
     public void tankDrive(double leftpower, double rightpower) {
         m_drive.tankDrive(leftpower, rightpower);
+        m_drive.feed();
       }
     
       public void cheezyDrive(double straight, double turn) {

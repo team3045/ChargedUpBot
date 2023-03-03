@@ -40,8 +40,8 @@ public class Constants {
    public static int lowPosButtonID = XboxController.Button.kA.value;
    
    //Falcons
-   public static int lMotor1 = 0;
-   public static int lMotor2 = 1;
+   public static int lMotor1 = 1;
+   public static int lMotor2 = 0;
    public static int lMotor3 = 2;
    public static int rMotor1 = 4;
    public static int rMotor2 = 3;
