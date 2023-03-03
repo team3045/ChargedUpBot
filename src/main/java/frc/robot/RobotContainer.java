@@ -137,15 +137,6 @@ grabToggle.toggleOnTrue(new ToggleGrab( m_claw ).withInterruptBehavior(Interrupt
                     
 final JoystickButton coneCubeSwapButton = new JoystickButton(controller, XboxController.Button.kX.value);        
 coneCubeSwapButton.toggleOnTrue(new ConeCubeSwap().withInterruptBehavior(InterruptionBehavior.kCancelSelf));
-                    
-final JoystickButton low = new JoystickButton(controller, XboxController.Button.kA.value);        
-low.toggleOnTrue(new GoToPosition_TelescopingArm( m_telescopingArm ).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
-                    
-final JoystickButton mid = new JoystickButton(controller, XboxController.Button.kB.value);        
-mid.toggleOnTrue(new GoToPosition_TelescopingArm( m_telescopingArm ).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
-                    
-final JoystickButton high = new JoystickButton(controller, XboxController.Button.kY.value);        
-high.toggleOnTrue(new GoToPosition_TelescopingArm( m_telescopingArm ).withInterruptBehavior(InterruptionBehavior.kCancelSelf));
 */
 
 

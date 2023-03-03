@@ -47,7 +47,8 @@ public class Constants {
    public static int rMotor2 = 3;
    public static int rMotor3 = 5;
 
-
+   //Gyro
+   public static int gyro = 0;
 
    //Telescoping arm target positions
    public static Vector2 lowPosTArm = new Vector2(0, 0);
