@@ -56,7 +56,7 @@ public class GoToPosition_FourBar extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
-        // Checks which button is pressed
+       /*  // Checks which button is pressed
         if (RobotContainer.m_robotContainer.controller.getRawButton(Constants.lowPosButtonID)) {
             // Sets target position
             m_fourBar.fourBarMotor.set(ControlMode.Position, Constants.lowPos + Constants.armZero);
@@ -67,6 +67,7 @@ public class GoToPosition_FourBar extends CommandBase {
             // Sets target position
             m_fourBar.fourBarMotor.set(ControlMode.Position, Constants.highPos + Constants.armZero);
         }
+        */
     }
 
     // Called every time the scheduler runs while the command is scheduled.
