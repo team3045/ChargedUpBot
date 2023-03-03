@@ -79,7 +79,7 @@ public final DifferentialDrive m_drive;
         rightMotor3.follow(rightMotor1);
         rightMotor3.setInverted(InvertType.FollowMaster);
         
-        m_drive = new DifferentialDrive(leftMotor1, rightMotor2);
+        m_drive = new DifferentialDrive(leftMotor1, rightMotor1);
         //m_drive.setDeadband(0.05);
 
         leftMotor1.configSelectedFeedbackSensor(FeedbackDevice.IntegratedSensor, 0, 0);
