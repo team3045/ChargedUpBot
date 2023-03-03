@@ -27,7 +27,7 @@ import frc.robot.math.Vector2;
  */
 public class Constants {
    //Claw Constants
-   public static double clawSpeed = 0;
+   public static double clawSpeed = 0.2;
 
    //Fourbar target position
    public static double highPos=0;
