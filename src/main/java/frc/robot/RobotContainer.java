@@ -52,6 +52,7 @@ public class RobotContainer {
     public final Claw m_claw = new Claw();
     public final Joystick LJoystick = new Joystick(1);
     public final Joystick RJoystick = new Joystick(0);
+    public final Joystick buttonboard = new Joystick(2);
     
 
 
