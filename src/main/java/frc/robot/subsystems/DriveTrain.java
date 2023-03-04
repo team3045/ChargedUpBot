@@ -21,6 +21,8 @@ import com.ctre.phoenix.sensors.Pigeon2;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 //import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import com.ctre.phoenix.motorcontrol.TalonFXControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.GroupMotorControllers;
@@ -104,7 +106,7 @@ public Pigeon2 pigeon;
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
-
+        SmartDashboard.putNumber("thing",pigeon.getPitch());
     }
 
     @Override

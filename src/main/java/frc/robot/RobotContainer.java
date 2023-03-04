@@ -158,7 +158,7 @@ high.toggleOnTrue(new GoToPosition_TelescopingArm( m_telescopingArm ).withInterr
 */
     Balance balance = new Balance(m_driveTrain);
 
-    final JoystickButton balanceBtn = new JoystickButton(buttonboard, 1);
+    final JoystickButton balanceBtn = new JoystickButton(buttonboard, 3);
     balanceBtn.whileTrue(balance);
 
 
