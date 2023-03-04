@@ -63,20 +63,16 @@ public class ToggleGrab extends CommandBase {
     @Override
     public void execute() {
 
-        m_claw.leftClawMotor.set(Constants.clawSpeed);
-        m_claw.rightClawMotor.set(Constants.clawSpeed);
         m_claw.solenoid.set(!ConeCubeSwap.isCube);
         
-
     }
 
     // Called once the command ends or is interrupted.
     @Override
-    public void end(boolean interrupted) 
-    {
-        m_claw.leftClawMotor.set(0);
-        m_claw.rightClawMotor.set(0);
+    public void end(boolean interrupted) {
+
         m_claw.solenoid.set(false);
+        
     }
 
     // Returns true when the command should end.

@@ -33,7 +33,7 @@ public class Constants {
    public static final double kSpeedMult = 2;
 
 //Claw Constants
-   public static double clawSpeed = 0;
+   public static double clawSpeed = 0.2;
 
    //Fourbar target position
    public static double highPos=0;
