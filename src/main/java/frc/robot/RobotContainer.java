@@ -80,7 +80,7 @@ public class RobotContainer {
     // SmartDashboard Buttons
     SmartDashboard.putData("Autonomous_Command", new Autonomous_Command());
     SmartDashboard.putData("Teleop_Drive", new Teleop_Drive( m_driveTrain ));
-    SmartDashboard.putData("GoToPosition_FourBar", new GoToPosition_FourBar( m_fourBar ));
+    SmartDashboard.putData("GoToPosition_FourBar", new FourBar_LowPos( m_fourBar ));
     //SmartDashboard.putData("GoToPosition_TelescopingArm", new GoToPosition_TelescopingArm( m_telescopingArm ));
     SmartDashboard.putData("Intake", new Intake( m_claw ));
     SmartDashboard.putData("Outtake", new Outtake( m_claw ));
