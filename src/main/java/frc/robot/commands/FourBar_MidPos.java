@@ -57,15 +57,10 @@ public class FourBar_MidPos extends CommandBase {
     @Override
     public void initialize() {
          // Checks which button is pressed
-        if (RobotContainer.m_robotContainer.buttonboard.getRawButton(Constants.lowPosButtonID)) {
+        
             // Sets target position
-            FourBar_lowm_fourBar.fourBarMotor.set(ControlMode.Position, Constants.lowPos + Constants.armZero);
-        } else if (RobotContainer.m_robotContainer.buttonboard.getRawButton(Constants.midPosButtonID)) {
-            // Sets target position
-            m_fourBar.fourBarMotor.set(ControlMode.Position, Constants.midPos + Constants.armZero);
-        } else if (RobotContainer.m_robotContainer.buttonboard.getRawButton(Constants.highPosButtonID)) {
-            // Sets target position
-            m_fourBar.fourBarMotor.set(ControlMode.Position, Constants.highPos + Constants.armZero);
+            m_fourBar.fourBarM1.set(ControlMode.Position, Constants.midPos + Constants.armZero); 
+            m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
         }
         
     }

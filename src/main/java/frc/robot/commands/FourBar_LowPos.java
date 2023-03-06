@@ -57,11 +57,10 @@ public class FourBar_LowPos extends CommandBase {
     @Override
     public void initialize() {
          // Checks which button is pressed
-        if (RobotContainer.m_robotContainer.buttonboard.getRawButton(Constants.lowPosButtonID)) {
+        
             // Sets target position
             m_fourBar.fourBarM1.set(ControlMode.Position, Constants.lowPos + Constants.armZero);
             m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
-        }
         
     }
 
