@@ -53,6 +53,11 @@ public class Constants {
    public static int rMotor2 = 3;
    public static int rMotor3 = 5;
 
+   //Fourbar positions
+   public static int lowPosID = 4;
+   public static int midPosID = 5;
+   public static int highPosID = 6;
+
 
 
    //Telescoping arm target positions
