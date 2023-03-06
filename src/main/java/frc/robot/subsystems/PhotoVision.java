@@ -93,7 +93,7 @@ public class PhotoVision extends SubsystemBase {
         forwardSpeed = -XboxController.getRightY();
 
         if (XboxController.getAButton()) {
-            //assist mode, aim at target.
+            //assist mode, aim at target. 
             var result = camera.getLatestResult();
 
             if (result.hasTargets()) {
