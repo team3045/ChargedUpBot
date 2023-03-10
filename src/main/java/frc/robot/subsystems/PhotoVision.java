@@ -87,12 +87,12 @@ public class PhotoVision extends SubsystemBase {
         double rotationSpeed;
         double forwardSpeed;
         //xboxcontroller, prob change port number.
-        XboxController XboxController = new XboxController(0);
+        
 
-        rotationSpeed = XboxController.getLeftX();
-        forwardSpeed = -XboxController.getRightY();
+        rotationSpeed = 15;
+        forwardSpeed = 15;
 
-        if (XboxController.getAButton()) {
+       
             //assist mode, aim at target.
             var result = camera.getLatestResult();
 
@@ -123,11 +123,7 @@ public class PhotoVision extends SubsystemBase {
                 hasTargets = false;
                 rotationSpeed = 0;
             }
-        }
-        else {
-            rotationSpeed = XboxController.getLeftX();
-            forwardSpeed = -XboxController.getRightY();
-        }
+        
         drive.arcadeDrive(forwardSpeed, rotationSpeed);
     }
 
