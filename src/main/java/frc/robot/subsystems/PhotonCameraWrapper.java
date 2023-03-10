@@ -30,9 +30,9 @@ public class PhotonCameraWrapper extends SubsystemBase {
         
         
         final AprilTag tag01 = new AprilTag(01, new Pose3d(new Pose2d(37.5, 1 , Rotation2d.fromDegrees(0.0))));
-        final AprilTag tag2 = new AprilTag(2, new Pose3d(new Pose2d(108.25, 1 , Rotation2d.fromDegrees(180))));
-        final AprilTag tag3 = new AprilTag(3, new Pose3d(new Pose2d(178.5, 1, Rotation2d.fromDegrees(180))));
-        final AprilTag tag4 = new AprilTag(4, new Pose3d(new Pose2d(267.5, -4, Rotation2d.fromDegrees(180))));
+        final AprilTag tag2 = new AprilTag(2, new Pose3d(new Pose2d(108.25, 1 , Rotation2d.fromDegrees(0))));
+        final AprilTag tag3 = new AprilTag(3, new Pose3d(new Pose2d(178.5, 1, Rotation2d.fromDegrees(0))));
+        final AprilTag tag4 = new AprilTag(4, new Pose3d(new Pose2d(267.5, -4, Rotation2d.fromDegrees(0))));
         final AprilTag tag5 = new AprilTag(5, new Pose3d(new Pose2d(267.5, 655.25, Rotation2d.fromDegrees(180))));
         final AprilTag tag6 = new AprilTag(6, new Pose3d(new Pose2d(178.5, 651.25, Rotation2d.fromDegrees(180))));
         final AprilTag tag7 = new AprilTag(7, new Pose3d(new Pose2d(108.25, 651.25, Rotation2d.fromDegrees(180))));
