@@ -29,19 +29,19 @@ public class PhotonCameraWrapper extends SubsystemBase {
     public PhotonCameraWrapper() {
         
         
-        final AprilTag tag01 = new AprilTag(01, new Pose3d(new Pose2d(37.5, 1 , Rotation2d.fromDegrees(0.0))));
-        final AprilTag tag2 = new AprilTag(2, new Pose3d(new Pose2d(108.25, 1 , Rotation2d.fromDegrees(0))));
-        final AprilTag tag3 = new AprilTag(3, new Pose3d(new Pose2d(178.5, 1, Rotation2d.fromDegrees(0))));
-        final AprilTag tag4 = new AprilTag(4, new Pose3d(new Pose2d(267.5, -4, Rotation2d.fromDegrees(0))));
-        final AprilTag tag5 = new AprilTag(5, new Pose3d(new Pose2d(267.5, 655.25, Rotation2d.fromDegrees(180))));
-        final AprilTag tag6 = new AprilTag(6, new Pose3d(new Pose2d(178.5, 651.25, Rotation2d.fromDegrees(180))));
-        final AprilTag tag7 = new AprilTag(7, new Pose3d(new Pose2d(108.25, 651.25, Rotation2d.fromDegrees(180))));
-        final AprilTag tag8 = new AprilTag(8, new Pose3d(new Pose2d(37.5, 651.25, Rotation2d.fromDegrees(180))));
+        final AprilTag tag1 = new AprilTag(1, new Pose3d(new Pose2d(610.77,  42.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag2 = new AprilTag(2, new Pose3d(new Pose2d(610.77, 108.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag3 = new AprilTag(3, new Pose3d(new Pose2d(610.77, 174.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag4 = new AprilTag(4, new Pose3d(new Pose2d(636.96, 265.74, Rotation2d.fromDegrees(180))));
+        final AprilTag tag5 = new AprilTag(5, new Pose3d(new Pose2d( 14.25, 265.74, Rotation2d.fromDegrees(0))));
+        final AprilTag tag6 = new AprilTag(6, new Pose3d(new Pose2d( 40.45, 174.19, Rotation2d.fromDegrees(0))));
+        final AprilTag tag7 = new AprilTag(7, new Pose3d(new Pose2d( 40.45, 108.19, Rotation2d.fromDegrees(0))));
+        final AprilTag tag8 = new AprilTag(8, new Pose3d(new Pose2d( 40.45,  42.19, Rotation2d.fromDegrees(0))));
 
 
         ArrayList<AprilTag> atlList = new ArrayList<AprilTag>();
         atlList.add(tag2);
-        atlList.add(tag01);
+        atlList.add(tag1);
         atlList.add(tag3);
         atlList.add(tag4);
         atlList.add(tag5);
