@@ -47,7 +47,7 @@ public class Constants {
    
    //Falcons
    public static int lMotor1 = 1;
-   public static int lMotor2 = 0;
+   public static int lMotor2 = 9;
    public static int lMotor3 = 2;
    public static int rMotor1 = 4;
    public static int rMotor2 = 3;
@@ -69,6 +69,6 @@ public class Constants {
 
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
-   public static int pigeonCanId = 0;
+   public static int pigeonCanId = 8;
 }
 

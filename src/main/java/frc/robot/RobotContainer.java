@@ -83,7 +83,8 @@ public class RobotContainer {
     SmartDashboard.putData("Teleop_Drive", new Teleop_Drive( m_driveTrain ));
     SmartDashboard.putData("GoToPosition_FourBar", new FourBar_LowPos( m_fourBar ));
     //SmartDashboard.putData("GoToPosition_TelescopingArm", new GoToPosition_TelescopingArm( m_telescopingArm ));
-    SmartDashboard.putData("Intake", new Intake( m_claw ));
+    SmartDashboard.putData("IntakeCone", new IntakeCone(m_claw));
+    SmartDashboard.putData("IntakeCube", new IntakeCube( m_claw ));
     SmartDashboard.putData("Outtake", new Outtake( m_claw ));
     SmartDashboard.putData("ToggleGrab", new ToggleGrab( m_claw ));
     SmartDashboard.putData("ConeCubeSwap", new ConeCubeSwap());

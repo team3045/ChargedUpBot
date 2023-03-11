@@ -63,7 +63,6 @@ public class FourBar_MidPos extends CommandBase {
             m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
         }
         
-    }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
