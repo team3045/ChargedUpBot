@@ -11,6 +11,8 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 //import com.fasterxml.jackson.databind.ser.std.StaticListSerializerBase;
 
 //import edu.wpi.first.math.Vector;
@@ -26,8 +28,12 @@ import frc.robot.math.Vector2;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
-   //Claw Constants
-   public static double clawSpeed = 0;
+ //Balance  
+   public static final double kPitchDeadspot = 2;
+   public static final double kSpeedMult = 2;
+
+//Claw Constants
+   public static double clawSpeed = 0.2;
 
    //Fourbar target position
    public static double highPos=0;
@@ -40,12 +46,17 @@ public class Constants {
    public static int lowPosButtonID = XboxController.Button.kA.value;
    
    //Falcons
-   public static int lMotor1 = 3;
-   public static int lMotor2 = 3;
-   public static int lMotor3 = 3;
-   public static int RMotor1 = 3;
-   public static int RMotor2 = 3;
-   public static int RMotor3 = 3;
+   public static int lMotor1 = 1;
+   public static int lMotor2 = 0;
+   public static int lMotor3 = 2;
+   public static int rMotor1 = 4;
+   public static int rMotor2 = 3;
+   public static int rMotor3 = 5;
+
+   //Fourbar positions
+   public static int lowPosID = 4;
+   public static int midPosID = 5;
+   public static int highPosID = 6;
 
 
 
@@ -58,5 +69,6 @@ public class Constants {
 
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
+   public static int pigeonCanId = 0;
 }
 

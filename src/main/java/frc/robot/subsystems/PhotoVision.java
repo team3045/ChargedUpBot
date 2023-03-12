@@ -91,9 +91,9 @@ public class PhotoVision extends SubsystemBase {
 
         rotationSpeed = 15;
         forwardSpeed = 15;
-
        
             //assist mode, aim at target.
+
             var result = camera.getLatestResult();
 
             if (result.hasTargets()) {
