@@ -23,7 +23,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.util.Units;
-import edu.wpi.first.wpilibj.XboxController;
+
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.PWMVictorSPX;
 
@@ -87,13 +87,13 @@ public class PhotoVision extends SubsystemBase {
         double rotationSpeed;
         double forwardSpeed;
         //xboxcontroller, prob change port number.
-        XboxController XboxController = new XboxController(0);
+        
 
-        rotationSpeed = XboxController.getLeftX();
-        forwardSpeed = -XboxController.getRightY();
+        rotationSpeed = 15;
+        forwardSpeed = 15;
+       
+            //assist mode, aim at target.
 
-        if (XboxController.getAButton()) {
-            //assist mode, aim at target. 
             var result = camera.getLatestResult();
 
             if (result.hasTargets()) {
@@ -123,11 +123,7 @@ public class PhotoVision extends SubsystemBase {
                 hasTargets = false;
                 rotationSpeed = 0;
             }
-        }
-        else {
-            rotationSpeed = XboxController.getLeftX();
-            forwardSpeed = -XboxController.getRightY();
-        }
+        
         drive.arcadeDrive(forwardSpeed, rotationSpeed);
     }
 

@@ -28,12 +28,26 @@ public class PhotonCameraWrapper extends SubsystemBase {
 
     public PhotonCameraWrapper() {
         
-        final AprilTag tag18 = new AprilTag(18, new Pose3d(new Pose2d(Length, Width / 2.0, Rotation2d.fromDegrees(180))));
-        final AprilTag tag01 = new AprilTag(01, new Pose3d(new Pose2d(0.0, Width / 2.0, Rotation2d.fromDegrees(0.0))));
+        
+        final AprilTag tag1 = new AprilTag(1, new Pose3d(new Pose2d(610.77,  42.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag2 = new AprilTag(2, new Pose3d(new Pose2d(610.77, 108.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag3 = new AprilTag(3, new Pose3d(new Pose2d(610.77, 174.19, Rotation2d.fromDegrees(180))));
+        final AprilTag tag4 = new AprilTag(4, new Pose3d(new Pose2d(636.96, 265.74, Rotation2d.fromDegrees(180))));
+        final AprilTag tag5 = new AprilTag(5, new Pose3d(new Pose2d( 14.25, 265.74, Rotation2d.fromDegrees(0))));
+        final AprilTag tag6 = new AprilTag(6, new Pose3d(new Pose2d( 40.45, 174.19, Rotation2d.fromDegrees(0))));
+        final AprilTag tag7 = new AprilTag(7, new Pose3d(new Pose2d( 40.45, 108.19, Rotation2d.fromDegrees(0))));
+        final AprilTag tag8 = new AprilTag(8, new Pose3d(new Pose2d( 40.45,  42.19, Rotation2d.fromDegrees(0))));
+
 
         ArrayList<AprilTag> atlList = new ArrayList<AprilTag>();
-        atlList.add(tag18);
-        atlList.add(tag01);
+        atlList.add(tag2);
+        atlList.add(tag1);
+        atlList.add(tag3);
+        atlList.add(tag4);
+        atlList.add(tag5);
+        atlList.add(tag6);
+        atlList.add(tag7);
+        atlList.add(tag8);
 
 
         AprilTagFieldLayout atfl = new AprilTagFieldLayout(atlList, Length, Width);
