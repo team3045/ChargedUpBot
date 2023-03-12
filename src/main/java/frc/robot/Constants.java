@@ -11,7 +11,8 @@
 
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
+import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
 
 //import com.fasterxml.jackson.databind.ser.std.StaticListSerializerBase;
 
@@ -36,14 +37,9 @@ public class Constants {
    public static double clawSpeed = 0.2;
 
    //Fourbar target position
-   public static double highPos=0;
-   public static double midPos=0;
-   public static double lowPos=0;
-
-   //IDs for buttons
-   public static int highPosButtonID=XboxController.Button.kY.value;
-   public static int midPosButtonID=XboxController.Button.kB.value;
-   public static int lowPosButtonID = XboxController.Button.kA.value;
+   public static double highPos = 8874.67;
+   public static double midPos = 7253.33;
+   public static double lowPos = 2135.33;
    
    //Falcons
    public static int lMotor1 = 1;
@@ -58,17 +54,24 @@ public class Constants {
    public static int midPosID = 5;
    public static int highPosID = 6;
 
-
-
-   //Telescoping arm target positions
-   public static Vector2 lowPosTArm = new Vector2(0, 0);
-   public static Vector2 midPosTArm = new Vector2(0, 0);
-   public static Vector2 highPosTArm = new Vector2(0, 0);
-   public static double armLenghtToUnits=0;
-   public static double armLengthZero = 0;
-
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
-   public static int pigeonCanId = 0;
+   public static int pigeonCanId = 9;
+
+   //Auton Constants
+   public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json" };
+
+   public static double ksVolts = 12;
+   public static double kvVoltSecondsPerMeter = 2.619;
+   public static double kaVoltSecondsSquaredPerMeter = 0.205;
+
+   public static DifferentialDriveKinematics kDriveKinematics = new DifferentialDriveKinematics(0.635);
+
+   public static double kPDriveVel = 0.05;
+
+   public static double kRamseteB = 2.0;
+   public static double kRamseteZeta = 0.7;
+
+   public static String layoutPATH = "paths/ChargedUp.json";
 }
 
