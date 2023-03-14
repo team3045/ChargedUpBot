@@ -78,7 +78,7 @@ public class FourBar_MidPos extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return true;
+        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.midPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.midPos - Constants.fourbarTolerance;
     }
 
     @Override

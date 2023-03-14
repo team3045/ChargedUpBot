@@ -65,6 +65,7 @@ public class FourBar_HighPos extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+
     }
 
     // Called once the command ends or is interrupted.
@@ -75,7 +76,7 @@ public class FourBar_HighPos extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return true;
+        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.highPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.highPos - Constants.fourbarTolerance;
     }
 
     @Override

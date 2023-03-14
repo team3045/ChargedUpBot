@@ -1,0 +1,8 @@
+{
+  "SysId": {
+    "Analysis Type": "Drivetrain",
+    "NetworkTables Settings": {
+      "serverTeam": "172.22.11.2"
+    }
+  }
+}

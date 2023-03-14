@@ -88,5 +88,20 @@
 },
 "time": 0.6290465334422876,
 "velocity": 0.0
-}
+},
+{
+    "acceleration": 0,
+    "curvature": 0,
+    "pose": {
+    "rotation": {
+    "radians": -0.039978687123370625
+    },
+    "translation": {
+    "x": 2.2103013967561025,
+    "y": 0.7295843592815778
+    }
+    },
+    "time": 10,
+    "velocity": 0.0
+    }
 ]

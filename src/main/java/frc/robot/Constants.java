@@ -18,6 +18,7 @@ import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
 
 //import edu.wpi.first.math.Vector;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.math.Vector2;
 
 /**
@@ -37,9 +38,11 @@ public class Constants {
    public static double clawSpeed = 0.2;
 
    //Fourbar target position
-   public static double highPos = 8874.67;
-   public static double midPos = 7253.33;
-   public static double lowPos = 2135.33;
+   public static double highPos = 8874.67 * (118.125 / 15);
+   public static double midPos = 7253.33 * (118.125 / 15);
+   public static double lowPos = 2135.33 * (118.125 / 15);
+
+   public static double fourbarTolerance = 500;
    
    //Falcons
    public static int lMotor1 = 1;
@@ -60,6 +63,8 @@ public class Constants {
 
    //Auton Constants
    public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json" };
+   public static String[][] routineCommands = new String[][] { new String[] { "fblow" } };
+   public static double[][] routineTimes = new double[][] { new double[] { 5 } };
 
    public static double ksVolts = 12;
    public static double kvVoltSecondsPerMeter = 2.619;
