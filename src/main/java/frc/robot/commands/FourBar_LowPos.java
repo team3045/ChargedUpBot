@@ -66,6 +66,7 @@ public class FourBar_LowPos extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+        
     }
 
     // Called once the command ends or is interrupted.
@@ -76,7 +77,7 @@ public class FourBar_LowPos extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return true;
+        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.lowPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.lowPos - Constants.fourbarTolerance;
     }
 
     @Override
