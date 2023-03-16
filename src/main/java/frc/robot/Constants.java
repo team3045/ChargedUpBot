@@ -32,15 +32,15 @@ import frc.robot.math.Vector2;
 public class Constants {
  //Balance  
    public static final double kPitchDeadspot = 2;
-   public static final double kSpeedMult = 2;
+   public static final double kSpeedMult = 3.5;
 
 //Claw Constants
    public static double clawSpeed = 0.2;
 
    //Fourbar target position
-   public static double highPos = 8874.67 * (118.125 / 15);
-   public static double midPos = 7253.33 * (118.125 / 15);
-   public static double lowPos = 2135.33 * (118.125 / 15);
+   public static double highPos = 8874.67 * (183.01 / 15);
+   public static double midPos = 7253.33 * (183.01 / 15);
+   public static double lowPos = 2135.33 * (183.01 / 15);
 
    public static double fourbarTolerance = 500;
    
@@ -53,9 +53,9 @@ public class Constants {
    public static int rMotor3 = 5;
 
    //Fourbar positions
-   public static int lowPosID = 4;
-   public static int midPosID = 5;
-   public static int highPosID = 6;
+   public static int lowPosID = 6;
+   public static int midPosID = 7;
+   public static int highPosID = 8;
 
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
