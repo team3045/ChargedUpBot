@@ -49,7 +49,7 @@ public Solenoid solenoid;
         rightClawMotor = new CANSparkMax(16, CANSparkMax.MotorType.kBrushless); 
         rightClawMotor.setInverted(false);
 
-        solenoid = new Solenoid(0, PneumaticsModuleType.CTREPCM, 0);
+        solenoid = new Solenoid(0, PneumaticsModuleType.REVPH, 0);
         addChild("Solenoid", solenoid);
  
 
