@@ -50,7 +50,7 @@ public Solenoid solenoid;
         rightClawMotor.setInverted(false);
 
         solenoid = new Solenoid(0, PneumaticsModuleType.REVPH, 0);
-        addChild("Solenoid", solenoid);
+       // addChild("Solenoid", solenoid);
  
 
 
