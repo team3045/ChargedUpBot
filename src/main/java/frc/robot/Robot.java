@@ -21,6 +21,8 @@ import java.io.IOException;
 import org.photonvision.PhotonPoseEstimator;
 import org.photonvision.PhotonPoseEstimator.PoseStrategy;
 
+import com.ctre.phoenix.led.CANdle;
+
 import edu.wpi.first.apriltag.AprilTagFieldLayout;
 import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.DriverStation;
@@ -36,7 +38,8 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  * the project.
  */
 public class Robot extends TimedRobot {
-
+    int x = 0;
+    private CANdle candle;
     private Command m_autonomousCommand;
 
     private RobotContainer m_robotContainer;
@@ -47,6 +50,10 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotInit() {
+        candle = new CANdle(10, "Canivore 3045");
+        candle.setLEDs(128, 0, 0);
+        candle.clearStickyFaults();
+
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         m_robotContainer = RobotContainer.getInstance();
@@ -67,7 +74,9 @@ public class Robot extends TimedRobot {
         // and running subsystem periodic() methods.  This must be called from the robot's periodic
         // block in order for anything in the Command-based framework to work.
         CommandScheduler.getInstance().run();
-        
+        x++;
+        for(int i = 0; i < 80; i++)
+            candle.setLEDs((int)(128 * (Math.sin((double)(x + i) / 32) + 1)), (int)(128 * (Math.cos((double)(x + i) / 32) + 1)), (int)(128 * (-Math.sin((double)(x + i) / 32) + 1)), 0, i, 1);
     }
 
 

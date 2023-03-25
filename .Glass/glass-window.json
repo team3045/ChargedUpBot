@@ -1,0 +1,51 @@
+{
+  "Docking": {
+    "Data": [
+      "DockSpace ID=0x8B93E3BD Window=0xA787BDB4 Pos=0,34 Size=1920,1077 CentralNode=1"
+    ]
+  },
+  "MainWindow": {
+    "GLOBAL": {
+      "fps": "120",
+      "height": "1101",
+      "maximized": "1",
+      "style": "1",
+      "userScale": "6",
+      "width": "958",
+      "xpos": "0",
+      "ypos": "29"
+    }
+  },
+  "Window": {
+    "###/FMSInfo": {
+      "Collapsed": "0",
+      "Pos": "7,310",
+      "Size": "281,302"
+    },
+    "###/SmartDashboard/Auto Mode": {
+      "Collapsed": "0",
+      "Pos": "693,199",
+      "Size": "522,84"
+    },
+    "###NetworkTables": {
+      "Collapsed": "0",
+      "Pos": "692,39",
+      "Size": "937,150"
+    },
+    "###NetworkTables Settings": {
+      "Collapsed": "0",
+      "Pos": "0,30",
+      "Size": "684,274"
+    },
+    "Debug##Default": {
+      "Collapsed": "0",
+      "Pos": "60,60",
+      "Size": "400,400"
+    },
+    "DockSpaceViewport_11111111": {
+      "Collapsed": "0",
+      "Pos": "0,34",
+      "Size": "1920,1077"
+    }
+  }
+}
