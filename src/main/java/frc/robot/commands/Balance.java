@@ -34,10 +34,10 @@ public class Balance extends CommandBase {
         drivetrain.stop();
       } else {
         // Math.copySign results in backwards movement to counteract a negative pitch and vice versa
-        // 0.075 value should be changed for best effect with your team's robot
+        // 0.075 value should be changed for best  effect with your team's robot
         // Our differential drive is stored under the drivetrain class as robotDrive
         // kSpeedMult is used for slow-speed testing and is generally set to 1
-        drivetrain.tankDrive(Math.copySign(Constants.kSpeedMult * 0.075, pitch), Math.copySign(Constants.kSpeedMult * 0.075, pitch));
+        drivetrain.tankDrive(Math.copySign(Constants.kSpeedMult * 0.1, pitch), Math.copySign(Constants.kSpeedMult * 0.1, pitch));
         // In our experience, the parameters of arcadeDrive() are swapped from what is in the docs.
         // The non-0 value is meant to be in the parameter dictating forward/backward robot movement
       }

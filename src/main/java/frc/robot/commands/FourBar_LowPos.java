@@ -66,7 +66,12 @@ public class FourBar_LowPos extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+<<<<<<< Updated upstream
         m_fourBar.fourBarM1.set(ControlMode.PercentOutput, 1);
+=======
+        if(timer.get() < 3)
+            RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.4, -0.4);
+>>>>>>> Stashed changes
     }
 
     // Called once the command ends or is interrupted.
@@ -77,7 +82,11 @@ public class FourBar_LowPos extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
+<<<<<<< Updated upstream
         return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.lowPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.lowPos - Constants.fourbarTolerance;
+=======
+        return timer.get() > 4;
+>>>>>>> Stashed changes
     }
 
     @Override
