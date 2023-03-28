@@ -1,24 +1,73 @@
 {
   "NetworkTables": {
+    "Persistent Values": {
+      "open": false
+    },
+    "Transitory Values": {
+      "open": false
+    },
+    "persistent": {
+      "LiveWindow": {
+        ".status": {
+          "open": true
+        },
+        "open": true
+      }
+    },
+    "transitory": {
+      "SmartDashboard": {
+        "Field": {
+          "open": true
+        },
+        "gyro": {
+          "open": true
+        }
+      }
+    },
     "types": {
       "/FMSInfo": "FMSInfo",
-      "/SmartDashboard/Auto Mode": "String Chooser"
+      "/SmartDashboard/Auto Mode": "String Chooser",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/gyro": "Gyro"
     },
     "windows": {
-      "/FMSInfo": {
+      "/SmartDashboard/Auto Mode": {
         "window": {
           "visible": true
         }
       },
-      "/SmartDashboard/Auto Mode": {
+      "/SmartDashboard/Field": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/gyro": {
         "window": {
           "visible": true
         }
       }
     }
   },
+  "NetworkTables Info": {
+    "Connections": {
+      "open": true
+    },
+    "visible": true
+  },
   "NetworkTables Settings": {
     "mode": "Client (NT3)",
     "serverTeam": "172.22.11.2"
+  },
+  "Plots": {
+    "Plot <0>": {
+      "plots": [
+        {
+          "height": 308
+        }
+      ],
+      "window": {
+        "visible": false
+      }
+    }
   }
 }

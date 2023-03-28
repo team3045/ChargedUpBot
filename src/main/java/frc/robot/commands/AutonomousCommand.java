@@ -41,6 +41,8 @@ public class AutonomousCommand extends CommandBase {
   private final BiConsumer<Double, Double> m_output;
   private DifferentialDriveWheelSpeeds m_prevSpeeds;
   private double m_prevTime;
+  private double m_prevVoltsLeft=0;
+  private double m_prevVoltsRight=0;
 
   private double lastInterrupt = 0;
   private double routineTime = 0;
@@ -182,6 +184,29 @@ public class AutonomousCommand extends CommandBase {
       leftOutput = leftSpeedSetpoint;
       rightOutput = rightSpeedSetpoint;
     }
+
+    if( leftOutput - m_prevVoltsLeft > dt * 5){
+      leftOutput = m_prevVoltsLeft + dt * 5;
+    } else if (m_prevVoltsLeft - leftOutput > dt * 5){
+      leftOutput = m_prevVoltsLeft - dt * 5;
+    }
+
+    if(Math.abs(leftOutput) > 4){
+      leftOutput = Math.copySign(4, leftOutput);
+    }
+
+    if( rightOutput - m_prevVoltsRight > dt * 5){
+      rightOutput = m_prevVoltsRight + dt * 5;
+    } else if (m_prevVoltsRight - rightOutput > dt * 5){
+      rightOutput = m_prevVoltsRight - dt * 5;
+    }
+
+    if(Math.abs(rightOutput) > 4){
+      rightOutput = Math.copySign(4, rightOutput);
+    }
+
+    m_prevVoltsLeft = leftOutput;
+    m_prevVoltsRight = rightOutput;
 
     m_output.accept(leftOutput, rightOutput);
     m_prevSpeeds = targetWheelSpeeds;

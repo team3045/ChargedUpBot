@@ -24,11 +24,14 @@ import org.photonvision.PhotonPoseEstimator.PoseStrategy;
 import com.ctre.phoenix.led.CANdle;
 
 import edu.wpi.first.apriltag.AprilTagFieldLayout;
+import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.cscore.UsbCamera;
 import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -53,6 +56,7 @@ public class Robot extends TimedRobot {
         candle = new CANdle(10, "Canivore 3045");
         candle.setLEDs(128, 0, 0);
         candle.clearStickyFaults();
+        CameraServer.startAutomaticCapture();
 
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.

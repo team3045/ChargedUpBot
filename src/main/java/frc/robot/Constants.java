@@ -63,8 +63,8 @@ public class Constants {
 
    //Auton Constants
    public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json" };
-   public static String[][] routineCommands = new String[][] { new String[] { "fblow" } };
-   public static double[][] routineTimes = new double[][] { new double[] { 5 } };
+   public static String[][] routineCommands = new String[][] { new String[] {  } };
+   public static double[][] routineTimes = new double[][] { new double[] { } };
 
    public static double ksVolts = 12;
    public static double kvVoltSecondsPerMeter = 2.619;
@@ -78,5 +78,7 @@ public class Constants {
    public static double kRamseteZeta = 0.7;
 
    public static String layoutPATH = "paths/ChargedUp.json";
+   public static double defaultSpeed = 0.5;
+   public static double targetFBVel = 2300;
 }
 

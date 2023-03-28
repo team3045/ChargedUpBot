@@ -56,9 +56,9 @@ public class FourBar_HighPos extends CommandBase {
     @Override
     public void initialize() {
             // Sets target position
-            m_fourBar.fourBarM1.set(ControlMode.Position, Constants.highPos + Constants.armZero);
-            m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
-        
+        //    m_fourBar.fourBarM1.set(ControlMode.Position, Constants.highPos + Constants.armZero);
+        //    m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+        m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel);
         
     }
 
@@ -71,12 +71,13 @@ public class FourBar_HighPos extends CommandBase {
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
+        m_fourBar.fourBarM1.set(ControlMode.Position, m_fourBar.fourBarM1.getSelectedSensorPosition());
     }
 
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.highPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.highPos - Constants.fourbarTolerance;
+        return false;
     }
 
     @Override
