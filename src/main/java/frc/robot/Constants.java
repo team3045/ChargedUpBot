@@ -32,17 +32,18 @@ import frc.robot.math.Vector2;
 public class Constants {
  //Balance  
    public static final double kPitchDeadspot = 2;
-   public static final double kSpeedMult = 3.5;
+   public static final double kSpeedMult = 4;
+   public static final double kRotationPerSecondMax = 0.001;
 
 //Claw Constants
    public static double clawSpeed = 0.2;
 
    //Fourbar target position
-   public static double highPos = 8874.67 * (183.01 / 15);
-   public static double midPos = 7253.33 * (183.01 / 15);
-   public static double lowPos = 2135.33 * (183.01 / 15);
+   public static double highPos = 70000;
+   public static double midPos = 51000;
+   public static double lowPos = 20000;
 
-   public static double fourbarTolerance = 500;
+   public static double fourbarTolerance = 2000;
    
    //Falcons
    public static int lMotor1 = 1;
@@ -63,8 +64,8 @@ public class Constants {
 
    //Auton Constants
    public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json" };
-   public static String[][] routineCommands = new String[][] { new String[] {  } };
-   public static double[][] routineTimes = new double[][] { new double[] { } };
+   public static String[][] routineCommands = new String[][] { new String[] { "fbhigh", "intakecone", "fblow", "back"} };
+   public static double[][] routineTimes = new double[][] { new double[] { 0, 0, 0, 0 } };
 
    public static double ksVolts = 12;
    public static double kvVoltSecondsPerMeter = 2.619;

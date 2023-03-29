@@ -126,6 +126,7 @@ public class AutonomousCommand extends CommandBase {
   public void interrupt(Command... with) {
       lastInterrupt = m_timer.get();
       interrupted = true;
+      interruptingCommand = with[0];
 
       CommandScheduler.getInstance().schedule(with);
   }
@@ -152,7 +153,7 @@ public class AutonomousCommand extends CommandBase {
       m_prevTime = curTime;
       return;
     }
-
+    /*
     var targetWheelSpeeds =
         m_kinematics.toWheelSpeeds(
             m_follower.calculate(m_pose.get(), m_trajectory.sample(curTime)));
@@ -191,18 +192,10 @@ public class AutonomousCommand extends CommandBase {
       leftOutput = m_prevVoltsLeft - dt * 5;
     }
 
-    if(Math.abs(leftOutput) > 4){
-      leftOutput = Math.copySign(4, leftOutput);
-    }
-
     if( rightOutput - m_prevVoltsRight > dt * 5){
       rightOutput = m_prevVoltsRight + dt * 5;
     } else if (m_prevVoltsRight - rightOutput > dt * 5){
       rightOutput = m_prevVoltsRight - dt * 5;
-    }
-
-    if(Math.abs(rightOutput) > 4){
-      rightOutput = Math.copySign(4, rightOutput);
     }
 
     m_prevVoltsLeft = leftOutput;
@@ -210,7 +203,7 @@ public class AutonomousCommand extends CommandBase {
 
     m_output.accept(leftOutput, rightOutput);
     m_prevSpeeds = targetWheelSpeeds;
-    m_prevTime = curTime;
+    m_prevTime = curTime;*/
   }
 
   @Override

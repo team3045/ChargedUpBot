@@ -28,6 +28,7 @@
       "/FMSInfo": "FMSInfo",
       "/SmartDashboard/Auto Mode": "String Chooser",
       "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/Four Bar": "Mechanism2d",
       "/SmartDashboard/gyro": "Gyro"
     },
     "windows": {
@@ -37,6 +38,11 @@
         }
       },
       "/SmartDashboard/Field": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Four Bar": {
         "window": {
           "visible": true
         }

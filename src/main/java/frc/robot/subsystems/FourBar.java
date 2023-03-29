@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.smartdashboard.Mechanism2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismLigament2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismObject2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismRoot2d;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj.util.Color8Bit;
 
@@ -26,6 +27,7 @@ import edu.wpi.first.wpilibj.util.Color8Bit;
 //import frc.robot.commands.*;
 //import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
@@ -75,7 +77,8 @@ public class FourBar extends SubsystemBase {
 
     @Override
     public void periodic() {
-        arm.setAngle(new Rotation2d(180 / Math.PI * fourBarM1.getSelectedSensorPosition() / 2048 / 104.625));
+        arm.setAngle(new Rotation2d(Math.PI * -(fourBarM1.getSelectedSensorPosition() - Constants.lowPos) / 1024 / 104.625));
+        SmartDashboard.putData("Four Bar", mech);
     }
 
     @Override

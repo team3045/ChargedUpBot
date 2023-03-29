@@ -78,9 +78,10 @@ public class Robot extends TimedRobot {
         // and running subsystem periodic() methods.  This must be called from the robot's periodic
         // block in order for anything in the Command-based framework to work.
         CommandScheduler.getInstance().run();
-        x++;
-        for(int i = 0; i < 80; i++)
-            candle.setLEDs((int)(128 * (Math.sin((double)(x + i) / 32) + 1)), (int)(128 * (Math.cos((double)(x + i) / 32) + 1)), (int)(128 * (-Math.sin((double)(x + i) / 32) + 1)), 0, i, 1);
+        
+        if(RobotContainer.m_robotContainer.buttonboard.getRawAxis(1)==-1)candle.setLEDs(255, 130, 0);
+        if(RobotContainer.m_robotContainer.buttonboard.getRawAxis(1)==1)candle.setLEDs(255, 0, 255);
+
     }
 
 
@@ -100,8 +101,12 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousInit() {
-        m_autonomousCommand = m_robotContainer.getAutonomousCommand();
-
+        try{
+            m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+            System.err.println(e.getStackTrace());
+        }
         // schedule the autonomous command (example)
         if (m_autonomousCommand != null) {
             m_autonomousCommand.schedule();
@@ -113,6 +118,9 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousPeriodic() {
+        x+=3;
+        for(int i = 0; i < 80; i++)
+            candle.setLEDs((int)(128 * (Math.sin((double)(x + i) / 32) + 1)), (int)(128 * (Math.cos((double)(x + i) / 32) + 1)), (int)(128 * (-Math.sin((double)(x + i) / 32) + 1)), 0, i, 1);
     }
 
     @Override

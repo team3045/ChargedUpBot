@@ -79,7 +79,7 @@ public class AutonomousFourBarLow extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.lowPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.lowPos - Constants.fourbarTolerance;
+        return m_fourBar.fourBarM1.getSelectedSensorPosition() < Constants.lowPos + Constants.fourbarTolerance && m_fourBar.fourBarM1.getSelectedSensorPosition() > Constants.lowPos - Constants.fourbarTolerance && Math.abs(m_fourBar.fourBarM1.getSelectedSensorVelocity()) < 1000;
     }
 
     @Override
