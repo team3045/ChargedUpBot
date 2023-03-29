@@ -44,6 +44,7 @@ public class Robot extends TimedRobot {
     int x = 0;
     private CANdle candle;
     private Command m_autonomousCommand;
+    UsbCamera clawCamera;
 
     private RobotContainer m_robotContainer;
 
@@ -56,7 +57,7 @@ public class Robot extends TimedRobot {
         candle = new CANdle(10, "Canivore 3045");
         candle.setLEDs(128, 0, 0);
         candle.clearStickyFaults();
-        CameraServer.startAutomaticCapture();
+        clawCamera = CameraServer.startAutomaticCapture();
 
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.

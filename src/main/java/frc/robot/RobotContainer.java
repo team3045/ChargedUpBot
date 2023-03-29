@@ -85,6 +85,8 @@ public class RobotContainer {
     public final AutonomousFourBarMid fbmid;
     public final AutonomousFourBarHigh fbhigh;
 
+    public final BalanceAuton balanceauton;
+
 
 // Joysticks
     private final XboxController controller = new XboxController(0);
@@ -112,6 +114,8 @@ public class RobotContainer {
     fblow = new AutonomousFourBarLow(m_fourBar);
     fbmid = new AutonomousFourBarMid(m_fourBar);
     fbhigh = new AutonomousFourBarHigh(m_fourBar);
+
+    balanceauton = new BalanceAuton(m_fourBar);
   
     intakeCube = new IntakeCube(m_claw);
     intakeCone = new IntakeCone(m_claw);
@@ -262,7 +266,8 @@ public XboxController getController() {
         return fbmid;
       case "fbhigh":
         return fbhigh;
-      
+      case "balanceback":
+        return balanceauton;
       case "intakecone":
         return intakeCone;
       case "intakecube":

@@ -31,7 +31,7 @@ import frc.robot.math.Vector2;
  */
 public class Constants {
  //Balance  
-   public static final double kPitchDeadspot = 2;
+   public static final double kPitchDeadspot = 5;
    public static final double kSpeedMult = 4;
    public static final double kRotationPerSecondMax = 0.001;
 
@@ -40,7 +40,7 @@ public class Constants {
 
    //Fourbar target position
    public static double highPos = 70000;
-   public static double midPos = 51000;
+   public static double midPos = 66000;
    public static double lowPos = 20000;
 
    public static double fourbarTolerance = 2000;
@@ -63,9 +63,12 @@ public class Constants {
    public static int pigeonCanId = 9;
 
    //Auton Constants
-   public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json" };
-   public static String[][] routineCommands = new String[][] { new String[] { "fbhigh", "intakecone", "fblow", "back"} };
-   public static double[][] routineTimes = new double[][] { new double[] { 0, 0, 0, 0 } };
+   public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json",  
+                                                           "paths/Unnamed.wpilib.json"};
+   public static String[][] routineCommands = new String[][] { new String[] { "fbmid", "intakecone", "fblow", "back"}, 
+                                                               new String[] { "fbmid", "intakecone", "fblow", "balanceback", "balance"}};
+   public static double[][] routineTimes = new double[][] { new double[] { 0, 0, 0, 0 }, 
+                                                            new double[] { 0, 0, 0, 0, 0 }};
 
    public static double ksVolts = 12;
    public static double kvVoltSecondsPerMeter = 2.619;

@@ -32,16 +32,6 @@
       "/SmartDashboard/gyro": "Gyro"
     },
     "windows": {
-      "/SmartDashboard/Auto Mode": {
-        "window": {
-          "visible": true
-        }
-      },
-      "/SmartDashboard/Field": {
-        "window": {
-          "visible": true
-        }
-      },
       "/SmartDashboard/Four Bar": {
         "window": {
           "visible": true
