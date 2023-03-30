@@ -15,6 +15,7 @@ package frc.robot;
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.math.geometry.Transform3d;
+import edu.wpi.first.networktables.NetworkTable;
 
 import java.io.IOException;
 
@@ -45,6 +46,7 @@ public class Robot extends TimedRobot {
     private CANdle candle;
     private Command m_autonomousCommand;
     UsbCamera clawCamera;
+    
 
     private RobotContainer m_robotContainer;
 
@@ -57,7 +59,7 @@ public class Robot extends TimedRobot {
         candle = new CANdle(10, "Canivore 3045");
         candle.setLEDs(128, 0, 0);
         candle.clearStickyFaults();
-        clawCamera = CameraServer.startAutomaticCapture();
+        clawCamera = CameraServer.startAutomaticCapture();         
 
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.

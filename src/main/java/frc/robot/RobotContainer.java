@@ -177,10 +177,10 @@ public class RobotContainer {
 
     new JoystickButton(buttonboard, 5).whileTrue(balance);
 
-    new JoystickButton(buttonboard, 4).whileTrue(intakeCone);
-    new JoystickButton(RJoystick, 3).whileTrue(intakeCone);
+    new JoystickButton(buttonboard, 3).whileTrue(intakeCube);
+    new JoystickButton(RJoystick, 3).whileTrue(intakeCube);
 
-    new JoystickButton(buttonboard, 3).whileTrue(outtake);
+    new JoystickButton(buttonboard, 4).whileTrue(outtake);
     new JoystickButton(LJoystick, 3).whileTrue(outtake);
 
     new JoystickButton(buttonboard, 6).onTrue(toggleGrab);
