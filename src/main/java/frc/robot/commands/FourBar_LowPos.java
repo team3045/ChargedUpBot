@@ -67,7 +67,7 @@ public class FourBar_LowPos extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.7, -0.7);
+        RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.84, -0.84);
     }
 
     // Called once the command ends or is interrupted.
