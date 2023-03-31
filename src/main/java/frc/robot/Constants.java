@@ -39,7 +39,7 @@ public class Constants {
    public static double clawSpeed = 0.2;
 
    //Fourbar target position
-   public static double highPos = 70000;
+   public static double highPos = 75000;
    public static double midPos = 66000;
    public static double lowPos = 20000;
 
@@ -65,8 +65,8 @@ public class Constants {
    //Auton Constants
    public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json",  
                                                            "paths/Unnamed.wpilib.json"};
-   public static String[][] routineCommands = new String[][] { new String[] { "fbmid", "intakecone", "fblow", "back"}, 
-                                                               new String[] { "fbmid", "intakecone", "fblow", "balanceback", "balance"}};
+   public static String[][] routineCommands = new String[][] { new String[] { "fbhigh", "intakecone", "fblow", "back"}, 
+                                                               new String[] { "fbhigh", "intakecone", "fblow", "balanceback", "balance"}};
    public static double[][] routineTimes = new double[][] { new double[] { 0, 0, 0, 0 }, 
                                                             new double[] { 0, 0, 0, 0, 0 }};
 
