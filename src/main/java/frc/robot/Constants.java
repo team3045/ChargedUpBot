@@ -32,8 +32,8 @@ import frc.robot.math.Vector2;
 public class Constants {
  //Balance  
    public static final double kPitchDeadspot = 5;
-   public static final double kSpeedMult = 4;
-   public static final double kRotationPerSecondMax = 0.001;
+   public static final double kSpeedMult = 5;
+   public static final double kRotationPerSecondMax = 0.01;
 
 //Claw Constants
    public static double clawSpeed = 0.2;

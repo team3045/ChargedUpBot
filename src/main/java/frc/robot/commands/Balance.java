@@ -45,7 +45,7 @@ public class Balance extends CommandBase {
         // 0.075 value should be changed for best effect with your team's robot
         // Our differential drive is stored under the drivetrain class as robotDrive
         // kSpeedMult is used for slow-speed testing and is generally set to 1
-        drivetrain.tankDrive(Math.copySign(Constants.kSpeedMult * 0.1, pitch), Math.copySign(Constants.kSpeedMult * 0.1, pitch));
+        drivetrain.tankDrive(Math.copySign(Math.abs(pitch) > 1.5 * Constants.kPitchDeadspot ? (Constants.kSpeedMult * 0.1) : (Constants.kSpeedMult * 0.08), pitch), Math.copySign(Math.abs(pitch) > 1.5 * Constants.kPitchDeadspot ? (Constants.kSpeedMult * 0.1) : (Constants.kSpeedMult * 0.08), pitch));
         // In our experience, the parameters of arcadeDrive() are swapped from what is in the docs.
         // The non-0 value is meant to be in the parameter dictating forward/backward robot movement
       }

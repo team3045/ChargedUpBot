@@ -67,7 +67,7 @@ public class BalanceAuton extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.7, -0.7);
+        RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.6, -0.6);
     }
 
     // Called once the command ends or is interrupted.
@@ -78,7 +78,7 @@ public class BalanceAuton extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return timer.get() > 2;
+        return timer.get() > 1.6;
     }
 
     @Override

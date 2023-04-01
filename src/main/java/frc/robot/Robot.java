@@ -46,6 +46,7 @@ public class Robot extends TimedRobot {
     private CANdle candle;
     private Command m_autonomousCommand;
     UsbCamera clawCamera;
+    //Front
     
 
     private RobotContainer m_robotContainer;
