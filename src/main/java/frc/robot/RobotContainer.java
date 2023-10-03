@@ -210,7 +210,7 @@ public XboxController getController() {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() throws Exception {
-    int trajectoryID = (int) SmartDashboard.getNumber("Path", 0);
+    int trajectoryID = (int) SmartDashboard.getNumber("path", 0);
     Trajectory trajectory = null;
     try {
       Path trajectoryPath = Filesystem.getDeployDirectory().toPath().resolve(Constants.trajectoryJSONS[trajectoryID]);

@@ -30,6 +30,7 @@ import edu.wpi.first.cscore.UsbCamera;
 import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
@@ -57,6 +58,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotInit() {
+        SmartDashboard.putString("Auton Key", "0-HIGH NO BAL \n1-HIGH BAL \n2-MID NO BAL \n3-LOW BAL");
         candle = new CANdle(10, "Canivore 3045");
         candle.setLEDs(128, 0, 0);
         candle.clearStickyFaults();
@@ -82,9 +84,17 @@ public class Robot extends TimedRobot {
         // and running subsystem periodic() methods.  This must be called from the robot's periodic
         // block in order for anything in the Command-based framework to work.
         CommandScheduler.getInstance().run();
-        
+
         if(RobotContainer.m_robotContainer.buttonboard.getRawAxis(1)==-1)candle.setLEDs(255, 130, 0);
-        if(RobotContainer.m_robotContainer.buttonboard.getRawAxis(1)==1)candle.setLEDs(255, 0, 255);
+        else if(RobotContainer.m_robotContainer.buttonboard.getRawAxis(1)==1)candle.setLEDs(255, 0, 255);
+        else {
+            x+=5;
+            for(int i = 0; i < 80; i++)
+                candle.setLEDs((int)(128 * (Math.sin((double)(x + i) / 32) + 1)), //r
+                               (int)(128 * (Math.cos((double)(x + i) / 32) + 1)), //g
+                               (int)(128 * (-Math.sin((double)(x + i) / 32) + 1)),//b
+                               0, i, 1);
+        }
 
     }
 
@@ -122,9 +132,7 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousPeriodic() {
-        x+=3;
-        for(int i = 0; i < 80; i++)
-            candle.setLEDs((int)(128 * (Math.sin((double)(x + i) / 32) + 1)), (int)(128 * (Math.cos((double)(x + i) / 32) + 1)), (int)(128 * (-Math.sin((double)(x + i) / 32) + 1)), 0, i, 1);
+       
     }
 
     @Override

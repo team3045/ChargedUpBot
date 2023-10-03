@@ -66,8 +66,12 @@ public class Constants {
    public static String[] trajectoryJSONS = new String[] { "paths/Unnamed.wpilib.json",  
                                                            "paths/Unnamed.wpilib.json"};
    public static String[][] routineCommands = new String[][] { new String[] { "fbhigh", "intakecone", "fblow", "back"}, 
+                                                               new String[] { "fbhigh", "intakecone", "fblow", "balanceback", "balance"},
+                                                               new String[] { "fbmid", "intakecone", "fblow", "back"}, 
                                                                new String[] { "fbhigh", "intakecone", "fblow", "balanceback", "balance"}};
    public static double[][] routineTimes = new double[][] { new double[] { 0, 0, 0, 0 }, 
+                                                            new double[] { 0, 0, 0, 0, 0 },
+                                                            new double[] { 0, 0, 0, 0 }, 
                                                             new double[] { 0, 0, 0, 0, 0 }};
 
    public static double ksVolts = 12;
@@ -83,6 +87,6 @@ public class Constants {
 
    public static String layoutPATH = "paths/ChargedUp.json";
    public static double defaultSpeed = 0.5;
-   public static double targetFBVel = 2300;
+   public static double targetFBVel = 4600;
 }
 
