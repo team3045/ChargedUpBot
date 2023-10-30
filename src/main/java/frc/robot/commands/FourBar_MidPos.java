@@ -58,20 +58,24 @@ public class FourBar_MidPos extends CommandBase {
          // Checks which button is pressed
         
             // Sets target position
-            //m_fourBar.fourBarM1.set(ControlMode.Position, Constants.midPos + Constants.armZero); 
-            //m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+       // m_fourBar.fourBarM1.set(ControlMode.Position, Constants.midPos + Constants.armZero); 
+      //  m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
 
 
-            System.out.println("Going to mid");
-            m_fourBar.fourBarM1.set(ControlMode.Velocity, -Constants.targetFBVel);
-        }
+         //   System.out.println("Going to mid");
+       // m_fourBar.fourBarM1.set(ControlMode.Velocity, -Constants.targetFBVel);
+    }
         
     
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-
+        System.out.println("going to mid");
+        //m_fourBar.fourBarM1.set(ControlMode.Velocity, -Constants.targetFBVel);
+        m_fourBar.fourBarM1.set(ControlMode.Position, Constants.midPos + Constants.armZero); 
+        m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+        System.out.print(m_fourBar.fourBarM1.getSelectedSensorPosition());
     }
 
     // Called once the command ends or is interrupted.

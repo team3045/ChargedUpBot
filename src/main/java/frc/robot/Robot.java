@@ -33,6 +33,8 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.subsystems.DriveTrain;
+
 
 
 /**
@@ -47,8 +49,6 @@ public class Robot extends TimedRobot {
     private CANdle candle;
     private Command m_autonomousCommand;
     UsbCamera clawCamera;
-    //Front
-    
 
     private RobotContainer m_robotContainer;
 
@@ -76,6 +76,10 @@ public class Robot extends TimedRobot {
     *
     * <p>This runs after the mode specific periodic functions, but before
     * LiveWindow and SmartDashboard integrated updating.
+    ==================
+    Useful Notes:
+    * Called every 20ms by default
+    * super(0.3) allows it to run for 30ms
     */
     @Override
     public void robotPeriodic() {
@@ -97,7 +101,6 @@ public class Robot extends TimedRobot {
         }
 
     }
-
 
     /**
     * This function is called once each time the robot enters Disabled mode.
@@ -166,4 +169,14 @@ public class Robot extends TimedRobot {
     public void testPeriodic() {
     }
 
+
+
+    /*NEW SWERVE CODE */
+    private WheelDrive backRight = new WheelDrive (0, 1, 0);
+    private WheelDrive backLeft = new WheelDrive (2, 3, 1);
+    private WheelDrive frontRight = new WheelDrive (4, 5, 2);
+    private WheelDrive frontLeft = new WheelDrive (6, 7, 3);
+
+    private SwerveDrive swerveDrive = new SwerveDrive (backRight, backLeft, frontRight, frontLeft);
+    
 }

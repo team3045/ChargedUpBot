@@ -58,14 +58,24 @@ public class FourBar_HighPos extends CommandBase {
             // Sets target position
         //    m_fourBar.fourBarM1.set(ControlMode.Position, Constants.highPos + Constants.armZero);
         //    m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
-        m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel);
         
+       // m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel);
+       // m_fourBar.fourBarM1.set(ControlMode.Position, Constants.highPos + Constants.armZero); 
+        //m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+        //System.out.println("Going to high");
+        // The above 3 lines were added for testing
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-
+        //m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel);
+        m_fourBar.fourBarM1.set(ControlMode.Position, Constants.highPos + Constants.armZero); 
+        m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+        System.out.println("Going to high");
+        System.out.println(Constants.targetFBVel + " " + Constants.highPos);
+        System.out.println(m_fourBar.fourBarM1.getSelectedSensorPosition());
+        System.out.println(m_fourBar.fourBarM1.getSupplyCurrent());
     }
 
     // Called once the command ends or is interrupted.

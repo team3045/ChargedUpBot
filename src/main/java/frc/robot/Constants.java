@@ -40,8 +40,8 @@ public class Constants {
 
    //Fourbar target position
    public static double highPos = 75000;
-   public static double midPos = 66000;
-   public static double lowPos = 20000;
+   public static double midPos = 65000;
+   public static double lowPos = 16000;
 
    public static double fourbarTolerance = 2000;
    
@@ -54,9 +54,9 @@ public class Constants {
    public static int rMotor3 = 5;
 
    //Fourbar positions
-   public static int lowPosID = 6;
-   public static int midPosID = 7;
-   public static int highPosID = 8;
+   public static int lowPosID = 12;
+   public static int midPosID = 10;
+   public static int highPosID = 9;
 
    //Zero position to calibrate position of both fourbar or telescoping arm
    public static double armZero=0;
@@ -87,6 +87,6 @@ public class Constants {
 
    public static String layoutPATH = "paths/ChargedUp.json";
    public static double defaultSpeed = 0.5;
-   public static double targetFBVel = 4600;
+   public static double targetFBVel = 3000;
 }
 

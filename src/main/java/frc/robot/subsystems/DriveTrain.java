@@ -108,10 +108,12 @@ public BooleanSubscriber pedalDown;
       rightMotor2 = new WPI_TalonFX(Constants.rMotor2, "Canivore 3045");
       rightMotor3 = new WPI_TalonFX(Constants.rMotor3, "Canivore 3045");
 
+      leftMotor1.setInverted(true);
       leftMotor2.follow(leftMotor1);
       leftMotor2.setInverted(InvertType.FollowMaster);
       leftMotor3.follow(leftMotor1);
       leftMotor3.setInverted(InvertType.FollowMaster);
+      rightMotor1.setInverted(true);
       rightMotor2.follow(rightMotor1);
       rightMotor2.setInverted(InvertType.FollowMaster);
       rightMotor3.follow(rightMotor1);
@@ -221,6 +223,7 @@ public BooleanSubscriber pedalDown;
 
         leftMotor1.set(ControlMode.PercentOutput, -Math.copySign(leftpower * leftpower, leftpower) * (doubSpeed ? 1 : Constants.defaultSpeed));
         rightMotor1.set(ControlMode.PercentOutput, Math.copySign(rightpower * rightpower, rightpower) * (doubSpeed ? 1 : Constants.defaultSpeed));
+        //System.out.println(leftMotor1.getSupplyCurrent());
       }
     
       public void cheezyDrive(double straight, double turn) {

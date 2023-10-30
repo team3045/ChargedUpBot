@@ -61,13 +61,23 @@ public class FourBar_LowPos extends CommandBase {
         timer = new Timer();
         timer.start();
          // Checks which button is pressed
+        m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel*0.1);
+         m_fourBar.fourBarM1.set(ControlMode.Position, Constants.lowPos + Constants.armZero); 
+         m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+            System.out.println("Going to low");
+            System.out.println(m_fourBar.fourBarM1.getSelectedSensorPosition());
+            // The above 3 lines were added for testing
         
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.84, -0.84);
+        //RobotContainer.m_robotContainer.m_driveTrain.tankDrive(-0.84, -0.84);
+        //m_fourBar.fourBarM1.set(ControlMode.Velocity, Constants.targetFBVel);
+       // m_fourBar.fourBarM1.set(ControlMode.Position, Constants.lowPos + Constants.armZero); 
+        //m_fourBar.fourBarfollower.follow(m_fourBar.fourBarM1);
+        //System.out.println("Going to low");
     }
 
     // Called once the command ends or is interrupted.
@@ -78,7 +88,8 @@ public class FourBar_LowPos extends CommandBase {
     // Returns true when the command should end.
     @Override
     public boolean isFinished() {
-        return timer.get() > 9;
+        //return timer.get() > 9;
+        return false;
     }
 
     @Override
